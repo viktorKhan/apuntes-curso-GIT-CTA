@@ -36,7 +36,6 @@ prueba
 * git log --oneline -- <file>, busca todos los commits que contengan un fichero
 * git checkout <revision> -- <file>, trae la versión del fichero correspondiente a la revisión.
 * git commit -am "message", comitea los ficheros trakeados de una vez, suma de add + commit.
-<<<<<<< HEAD
 * git commit -m "message" <file>, solo hace commit del fichero indicado
 * git commit --amend, los cambios se añaden al último commit
 * git checkout master^, vuelve al commit anterior
@@ -51,7 +50,11 @@ prueba
 * git log --abbrev-commit, muestra el ID de commit abreviados
 * git log --stat, muestra los ficheros cambiados en cada commit
 * git --decorate --graph --oneline --all, el --all incluye las ramas en el gráfico
+
+##Deshacer cambios
 * git checkout -- <file>, descarta los cambios realizados en la zona de trabajo y recupera los del último commit
+
+##Deshacer commits
 * git reset --hard <commit-id>, *elimina los cambios* posteriores al commit indicado
 * git reset --soft <commit-id>, descarta los commits posteriores al commit indicado pero *mueve los cambios a la zona de stagging/index*
 * git reset --mixed <commit-id>, descarta los commits posteriores al commit indicado pero *mueve los cambios a la zona de working*
@@ -64,7 +67,9 @@ prueba
 * git branch <local-branch> <repo>/<remote-branch>, me crea una rama trayéndome lo que hay en la rama remota
 * git checkout -b <local-branch> <repo>/<remote-branch>, me crea una rama trayéndome lo que hay en la rama remota y me posiciona
 
-
+##Ramas
+git rebase master, añade los commits de master a mi rama
+git rebase -continue, continua con el rebase si ha dado conflictos
 
 
 #Tips:
@@ -88,6 +93,9 @@ prueba
 * touch prueba.txt
 * git add prueba.txt
 * git commit -m "Añadimos el fichero prueba.txt"
+* rm prueba.txt
+* git add prueba.txt
+* git commit -m "Eliminamos el fichero prueba.txt"
 * git reset master^
 
 2. Borrar dos ficheros y hacmos commit con los dos y recuperar sólo uno de ellos.
@@ -102,3 +110,5 @@ prueba
 * git reset master^
 * git add prueba.txt
 * git commit -m "Añadimos el fichero prueba.txt"
+
+3. 
