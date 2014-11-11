@@ -56,6 +56,15 @@ prueba
 * git reset --soft <commit-id>, descarta los commits posteriores al commit indicado pero *mueve los cambios a la zona de stagging/index*
 * git reset --mixed <commit-id>, descarta los commits posteriores al commit indicado pero *mueve los cambios a la zona de working*
 * git gc --force, purga los commits eliminados
+* git revert <commit-id>, *crea un nuevo commit* con lo contrario del commit especificado
+* git branch -a, mustra todas las ramas, incluso las remotas
+* git branch -d <branch>, borra ramas que ya han sido mergeadas
+* git branch -D <branch>, borra ramas aunque no hayan sido mergeadas
+* git push <remote> :<branch>, borrar una rama remota
+* git branch <local-branch> <repo>/<remote-branch>, me crea una rama trayéndome lo que hay en la rama remota
+* git checkout -b <local-branch> <repo>/<remote-branch>, me crea una rama trayéndome lo que hay en la rama remota y me posiciona
+
+
 
 
 #Tips:
@@ -70,6 +79,7 @@ prueba
 #Revisar:
 
 * Rebase interactive
+* Continuous delivery - Martin Fowler (feature branch / feature toogle)
 
 #Ejercicios:
 
