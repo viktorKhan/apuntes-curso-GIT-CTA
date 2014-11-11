@@ -5,6 +5,7 @@ Repositorio de prueba
 
 -- Comandos útiles
 
+* git <command> -h, muestra las opciones del comando indicado
 * git config --list (mostrar configuración global)
 * git config propiedad "valor" (guarda en la propiedad en la configuración del proyecto)
 * git config --global user.name "me"
@@ -38,16 +39,42 @@ Repositorio de prueba
 <<<<<<< HEAD
 * git commit -m "message" <file>, solo hace commit del fichero indicado
 * git commit --amend, los cambios se añaden al último commit
-
-=======
->>>>>>> d8d27edae446a45da76a17007864ed5cffc81031
+* git checkout master^, vuelve al commit anterior
+* git checkout master^^, vuelve al penúltimo commit
+* git checkout master~2, vuelve al penúltimo commit
+* git checkout -- <file>, 
+* git diff -w master origin -- <file>, compara un fichero entre dos ramas
+* git log master~12..master~10, muestra los commits que van del doceavo al décimo
+* git log --grep='reg-exp', obtiene los commits que coinciden con la expresión regular 'reg-exp'
+* git log --no-merges, mustra todos los commits salvo los que son de mergeo
+* git log [--since|--before|--after]={2014-04-18}, muestra los commits desde, anteriores o posteriores a la fecha indicada
+* git log --abbrev-commit, muestra el ID de commit abreviados
+* git log --stat, muestra los ficheros cambiados en cada commit
+* git --decorate --graph --oneline --all, el --all incluye las ramas en el gráfico
+* git checkout -- <file>, descarta los cambios realizados en la zona de trabajo y recupera los del último commit
+* git reset --hard <commit-id>, *elimina los cambios* posteriores al commit indicado
+* git reset --soft <commit-id>, descarta los commits posteriores al commit indicado pero *mueve los cambios a la zona de stagging/index*
+* git reset --mixed <commit-id>, descarta los commits posteriores al commit indicado pero *mueve los cambios a la zona de working*
+* git gc --force, purga los commits eliminados
 
 
 Tips:
 
 * Crear siempre un primero commit tonto, por ejemplo con un fichero readme.txt
+* Para obtener el caracter ~, pulsar AltGr-4-espacio
+* User DiffMerge como utilidad para comparar merges en GIT
+* Hacer "squashing", aplanar commits, juntar varios commits en uno
+* Hacer "spliting", dividir un commit en n commits
 
 
 Revisar:
 
 * Rebase interactive
+
+Ejercicios:
+
+1. En un repo nuevo o existente, crear un fichero "nombre.txt", borrar fichero y hagamos un commit. Recuperar el fichero. 
+
+
+2. Borrar dos ficheros y hacmos commit con los dos y recuperar sólo uno de ellos.
+
