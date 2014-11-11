@@ -1,7 +1,7 @@
 prueba
 ======
 
-Repositorio de prueba
+#Repositorio de prueba
 
 -- Comandos útiles
 
@@ -58,7 +58,7 @@ Repositorio de prueba
 * git gc --force, purga los commits eliminados
 
 
-Tips:
+#Tips:
 
 * Crear siempre un primero commit tonto, por ejemplo con un fichero readme.txt
 * Para obtener el caracter ~, pulsar AltGr-4-espacio
@@ -67,14 +67,28 @@ Tips:
 * Hacer "spliting", dividir un commit en n commits
 
 
-Revisar:
+#Revisar:
 
 * Rebase interactive
 
-Ejercicios:
+#Ejercicios:
 
 1. En un repo nuevo o existente, crear un fichero "nombre.txt", borrar fichero y hagamos un commit. Recuperar el fichero. 
 
+* touch prueba.txt
+* git add prueba.txt
+* git commit -m "Añadimos el fichero prueba.txt"
+* git reset master^
 
 2. Borrar dos ficheros y hacmos commit con los dos y recuperar sólo uno de ellos.
 
+* touch prueba.txt
+* touch hola.txt
+* git add .
+* git commit -m "Añadimos los ficheros prueba.txt y hola.txt"
+* rm prueba.txt
+* rm hola.txt
+* git commit -am "Borramos los ficheros prueba.txt y hola.txt"
+* git reset master^
+* git add prueba.txt
+* git commit -m "Añadimos el fichero prueba.txt"
