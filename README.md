@@ -74,7 +74,14 @@ git rebase -continue, continua con el rebase si ha dado conflictos
 ##Mergeos
 * git merge rama1 --no-ff, si hay posibilidad de hacer Fast Forward, no lo hace y crea un commit de mergeo
 * git config branch.mergeoptions "--no-ff", configuramos a nivel de proyecto que al mergear cualquier rama no se haga un Fast Forward.
-* 
+
+
+##Remotos
+* git remote add <upstream> <url_repo>, enlazamos con un repo remoto distinto a origin (se suele llamar upstream)
+* git pull upstream master, nos traemos el código del repo remoto al que hemos enlazado
+* git fetch origin master, te trae los cambios de la rama master de remoto y los guarda en origin/master, pero NO los mergea
+* git push -f <repo> <branch>, machacas lo que hay en el remoto con mi local
+
 
 #Tips:
 
@@ -86,11 +93,17 @@ git rebase -continue, continua con el rebase si ha dado conflictos
 * Hacer "spliting", dividir un commit en n commits
 * ¿Hacer rebase o mergeos?
 * Merge de tipo "Fast Forward", avanzar n commits
+* Al crear una rama llamada "gh-pages", todo lo que suba a esa rama lo publicará en una URL (nombreUsuario.github.io.nombreProyecto). Motor de plantillas de Jekyll para darle estilos a la página (http://jekyllthemes.org/).
+
 
 #Revisar:
 
 * Rebase interactive
 * Continuous delivery - Martin Fowler (feature branch / feature toogle)
+* Entender el flujo de GitHub para poder contribuir en un proyecto, https://guides.github.com/introduction/flow/index.html
+* Git Flow, http://nvie.com/posts/a-successful-git-branching-model/
+
+
 
 #Ejercicios:
 
