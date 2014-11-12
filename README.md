@@ -65,11 +65,16 @@ prueba
 * git push <remote> :<branch>, borrar una rama remota
 * git branch <local-branch> <repo>/<remote-branch>, me crea una rama trayéndome lo que hay en la rama remota
 * git checkout -b <local-branch> <repo>/<remote-branch>, me crea una rama trayéndome lo que hay en la rama remota y me posiciona
+* git reset --hard orig_head, hace el reset y vuelve al commit donde anteriormente estaba HEAD, sea en la rama que sea.
 
 ##Ramas
 git rebase master, añade los commits de master a mi rama
 git rebase -continue, continua con el rebase si ha dado conflictos
 
+##Mergeos
+* git merge rama1 --no-ff, si hay posibilidad de hacer Fast Forward, no lo hace y crea un commit de mergeo
+* git config branch.mergeoptions "--no-ff", configuramos a nivel de proyecto que al mergear cualquier rama no se haga un Fast Forward.
+* 
 
 #Tips:
 
@@ -79,7 +84,8 @@ git rebase -continue, continua con el rebase si ha dado conflictos
 * User DiffMerge como utilidad para comparar merges en GIT
 * Hacer "squashing", aplanar commits, juntar varios commits en uno
 * Hacer "spliting", dividir un commit en n commits
-
+* ¿Hacer rebase o mergeos?
+* Merge de tipo "Fast Forward", avanzar n commits
 
 #Revisar:
 
