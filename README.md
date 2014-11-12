@@ -111,4 +111,6 @@ git rebase -continue, continua con el rebase si ha dado conflictos
 * git add prueba.txt
 * git commit -m "Añadimos el fichero prueba.txt"
 
-3. 
+3. Avanzar master dos commits, crear una rama con esos dos commits y dejar master sin esos dos commits
+* git branch rama1
+* git reset master~2 --hard
