@@ -134,3 +134,4 @@ git rebase -continue, continua con el rebase si ha dado conflictos
 3. Avanzar master dos commits, crear una rama con esos dos commits y dejar master sin esos dos commits
 * git branch rama1
 * git reset master~2 --hard
+* Como se te queda el cuerpo
