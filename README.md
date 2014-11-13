@@ -17,6 +17,11 @@
 * git log --oneline (formato bonito)
 * git show (mostrar info del commit)
 
+##Alias
+* git config --unset alias.aliasname, elimina un alias
+* git config alias.co commit, crea el alias "co" parar hacer commit
+* git config alias.ch checkout, crea el alias "ch" parar hacer checkout
+
 
 * git rm --cached <file> para mover de la zona de staging/index cuando NO HAY COMMITs todavía
 * git reset HEAD <file> para mover de la zona de staging/index cuando HAY COMMITS
@@ -82,6 +87,28 @@ git rebase -continue, continua con el rebase si ha dado conflictos
 * git fetch origin master, te trae los cambios de la rama master de remoto y los guarda en origin/master, pero NO los mergea
 * git push -f <repo> <branch>, machacas lo que hay en el remoto con mi local
 
+##Tags
+* git tag -a <tag_name> -m "message", Crear un tag anotado
+* git tag <tag_name>, Crear un tag ligero
+* git push <repo> --tags, sube todos los tags al remoto
+
+##Comparaciones
+* git diff <commit>, me muestra las diferencias entre mi área de trabajo y un commit
+* git diff --cached <commit>, me muestra las diferencias entre la zona index/stagging y un commit
+* git diff <commit1> <commit2>, saca las diferencias entre dos commits
+* git diff <commit1>..<commit2>, saca las diferencias entre dos commits
+* git diff <commit1> <commit2> <file>, saca las diferencias entre dos commits de un fichero
+* git diff <commit1>..<commit2> <file>, saca las diferencias entre dos commits de un fichero
+
+
+##Alterando commits
+* git checkout <branch> && git cherry-pick master^2, compia el penúltimo commit de de master a mi rama
+* git pull --rebase <repo> <branch>
+
+##Rebase interactivo
+* git rebase -i <commit-base>, ("squasing")
+
+
 
 #Tips:
 
@@ -89,7 +116,7 @@ git rebase -continue, continua con el rebase si ha dado conflictos
 * Crear siempre un primero commit tonto, por ejemplo con un fichero readme.txt
 * Para obtener el caracter ~, pulsar AltGr-4-espacio
 * User DiffMerge como utilidad para comparar merges en GIT
-* Hacer "squashing", aplanar commits, juntar varios commits en uno
+* Hacer "squashing", aplanar commits, juntar varios commits en uno (https://ariejan.net/2011/07/05/git-squash-your-latests-commits-into-one/)
 * Hacer "spliting", dividir un commit en n commits
 * ¿Hacer rebase o mergeos?
 * Merge de tipo "Fast Forward", avanzar n commits
@@ -102,6 +129,7 @@ git rebase -continue, continua con el rebase si ha dado conflictos
 * Continuous delivery - Martin Fowler (feature branch / feature toogle)
 * Entender el flujo de GitHub para poder contribuir en un proyecto, https://guides.github.com/introduction/flow/index.html
 * Git Flow, http://nvie.com/posts/a-successful-git-branching-model/
+* Migrar a GIT desde SVN (https://www.atlassian.com/git/tutorials/migrating-overview/)
 
 
 
